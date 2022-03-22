@@ -37,7 +37,7 @@ abi = compiled_simple_storage["contracts"]["SimpleStorage.sol"]["SimpleStorage"]
 
 
 w3 = Web3(web3.HTTPProvider(os.getenv("NODE_ADDRESS")))
-chain_id = 4
+chain_id = os.getenv("CHAIN_ID")
 wallet_address = os.getenv("WALLET_ADDRESS")
 wallet_key = os.getenv("PRIVATE_KEY")
 SimpleStorage_contract = w3.eth.contract(abi=abi, bytecode=bytecode)
